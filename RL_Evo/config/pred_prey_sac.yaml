@@ -1,0 +1,36 @@
+behaviors:
+  Predator:
+    trainer_type: sac
+    hyperparameters:
+      buffer_size: 2048
+      learning_rate: 3e-4
+      tau: 0.005
+      steps_per_update: 5
+    network_settings:
+      hidden_units: 128
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        strength: 1.0
+        gamma: 0.99
+    max_steps: 1e6
+    time_horizon: 128
+    summary_freq: 20000
+
+  Prey:
+    trainer_type: sac
+    hyperparameters:
+      buffer_size: 2048
+      learning_rate: 3e-4
+      tau: 0.005
+      steps_per_update: 5
+    network_settings:
+      hidden_units: 128
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        strength: 1.0
+        gamma: 0.99
+    max_steps: 1e6
+    time_horizon: 128
+    summary_freq: 20000

@@ -1,0 +1,27 @@
+behaviors:
+  Predator:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 256
+      buffer_size: 2048
+      learning_rate: 3.0e-4
+    network_settings:
+      num_layers: 2
+      hidden_units: 128
+    max_steps: 1000000
+    time_horizon: 128
+    summary_freq: 20000
+
+
+  Prey:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 256
+      buffer_size: 2048
+      learning_rate: 3.0e-4
+    network_settings:
+      num_layers: 2
+      hidden_units: 128
+    max_steps: 1000000
+    time_horizon: 128
+    summary_freq: 20000
